@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: purple;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+.logo,
+.play,
+.home,
+.game,
+.game h1,
+.hands {
+  display: flex;
+}
+
+.logo {
+  flex: 1;
+  justify-content: center;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.play {
+  flex: 3;
+  border: 25px ridge blue;
+  background: rgb(228, 32, 32);
+  justify-content: center;
+  position: relative;
+}
+
+.home {
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.btn-play {
+  width: 200px;
+  height: 75px;
+  border: 10px ridge rgb(95, 2, 95);
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 45, 231, 1) 100%
+  );
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.game {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game h1 {
+  flex: 1;
+  align-items: center;
+}
+
+.hands {
+  flex: 2;
+}
+
+.hands > button {
+  background: white;
+  border: 2px solid black;
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.hasil {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "you comp"
+    "you comp"
+    "result result";
+}
+
+.hasil h1 {
+  font-size: 44px;
+  margin-top: 50px;
+}
+
+.you {
+  grid-area: you;
+  text-align: center;
+  background: white;
+}
+.comp {
+  grid-area: comp;
+  background: red;
+  text-align: center;
+}
+.result {
+  grid-area: result;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 66px;
+  margin: auto;
+}
+
+.corner {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.exit {
+  right: 125px;
+  bottom: 0px;
+}
+.again {
+  right: 0px;
+  bottom: 0px;
+}
+
+.hidden {
+  display: none;
+}
